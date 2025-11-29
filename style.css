@@ -1,0 +1,260 @@
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef1f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007bb8;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-top: 10px;
+}
+
+.logo-container {
+    background-color: white;
+    padding: 15px 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.logo {
+    max-width: 350px;
+    height: auto;
+    display: block;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+    max-width: 1300px;
+    margin: 30px auto;
+}
+
+#formulario-citas, #lista-citas {
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+#formulario-citas {
+    flex: 1;
+    min-width: 350px;
+}
+
+#lista-citas {
+    flex: 2;
+}
+
+fieldset {
+    border: 1px solid #dcdcdc;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+fieldset:hover {
+    border-color: #007bff;
+}
+
+legend {
+    font-weight: 700;
+    color: #007bb8;
+    padding: 0 10px;
+    font-size: 1.2em;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 5px 0;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+#fechaDia, #fechaMes, #fechaAnio, #fechaHora, #fechaMinuto {
+    width: auto;
+    display: inline-block;
+    max-width: 70px;
+    margin-right: 8px;
+    text-align: center;
+}
+
+#fechaNacimiento {
+    width: 100%;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.05em;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#guardarCitaBtn {
+    background-color: #28a745;
+    color: white;
+    width: 100%;
+}
+
+#guardarCitaBtn:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+}
+
+form button[type="button"] {
+    background-color: #6c757d;
+    color: white;
+    margin-top: 10px;
+    width: 100%;
+}
+
+form button[type="button"]:hover {
+    background-color: #5a6268;
+    transform: translateY(-1px);
+}
+
+
+#lista-citas h2 {
+    color: #007bb8;
+    border-bottom: 2px solid #007bb8;
+    padding-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    font-size: 0.95em;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 700;
+}
+
+#citasBody tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+#citasBody tr:hover {
+    background-color: #e9f5ff;
+}
+
+
+table button {
+    padding: 7px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.btn-modificar {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+    color: white;
+}
+
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.9em;
+    font-style: italic;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    display: none;
+}
+
+.error-input {
+    border: 2px solid #dc3545 !important;
+    background-color: #fffafa;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #343a40;
+    color: #f8f9fa;
+    font-size: 0.9em;
+}
+
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    #tablaCitas, #tablaCitas thead, #tablaCitas tbody, #tablaCitas th, #tablaCitas td, #tablaCitas tr {
+        display: block;
+    }
+    
+    #tablaCitas thead {
+        display: none;
+    }
+
+    #tablaCitas tr {
+        margin-bottom: 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+    }
+
+    #tablaCitas td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+}

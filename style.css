@@ -1,3 +1,4 @@
+/* ---- Estilos base y tipografía global ---- */
 body {
     font-family: 'Open Sans', Arial, sans-serif;
     margin: 0;
@@ -6,7 +7,7 @@ body {
     color: #333;
     line-height: 1.6;
 }
-
+/* ---- Encabezado con estructura centrada y fondo corporativo ---- */
 header {
     background-color: #007bb8;
     color: white;
@@ -24,6 +25,7 @@ header h1 {
 }
 
 .logo-container {
+    /* Caja que resalta el logo como elemento independiente */
     background-color: white;
     padding: 15px 40px;
     border-radius: 10px;
@@ -36,7 +38,7 @@ header h1 {
     height: auto;
     display: block;
 }
-
+/* Diseño de dos columnas flexible y centrado */
 main {
     padding: 20px;
     display: flex;
@@ -44,7 +46,7 @@ main {
     max-width: 1300px;
     margin: 30px auto;
 }
-
+/* ---- Tarjetas principales (formulario y lista) ---- */
 #formulario-citas, #lista-citas {
     padding: 30px;
     background: white;
@@ -60,7 +62,7 @@ main {
 #lista-citas {
     flex: 2;
 }
-
+/* ---- Formulario ---- */
 fieldset {
     border: 1px solid #dcdcdc;
     padding: 20px;
@@ -102,7 +104,7 @@ form input:focus, form textarea:focus {
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
     outline: none;
 }
-
+/* Inputs numéricos pequeños usados para la fecha/hora */
 #fechaDia, #fechaMes, #fechaAnio, #fechaHora, #fechaMinuto {
     width: auto;
     display: inline-block;
@@ -119,7 +121,7 @@ form textarea {
     resize: vertical;
     min-height: 100px;
 }
-
+/* ---- Botones ---- */
 form button {
     padding: 12px 25px;
     border: none;
@@ -160,7 +162,7 @@ form button[type="button"]:hover {
     border-bottom: 2px solid #007bb8;
     padding-bottom: 10px;
 }
-
+/* ---- Tabla de citas ---- */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -195,7 +197,7 @@ table button {
     font-size: 0.9em;
     font-weight: 600;
 }
-
+/* Botones de acciones dentro de la tabla */
 .btn-modificar {
     background-color: #ffc107;
     color: #333;
@@ -205,8 +207,7 @@ table button {
     background-color: #dc3545;
     color: white;
 }
-
-
+/* ---- Mensajes de error del formulario ---- */
 .error-message {
     color: #dc3545;
     font-size: 0.9em;
@@ -220,8 +221,7 @@ table button {
     border: 2px solid #dc3545 !important;
     background-color: #fffafa;
 }
-
-
+/* ---- Footer ---- */
 footer {
     text-align: center;
     padding: 20px;
@@ -230,14 +230,15 @@ footer {
     color: #f8f9fa;
     font-size: 0.9em;
 }
-
+/* ---- Responsive: vista móvil ---- */
 @media (max-width: 900px) {
     main {
+        /* Coloca todo en una sola columna para móviles */
         flex-direction: column;
         padding: 10px;
         margin: 10px auto;
     }
-
+    /* Transformación completa de tabla a formato "cards" para móvil */
     #tablaCitas, #tablaCitas thead, #tablaCitas tbody, #tablaCitas th, #tablaCitas td, #tablaCitas tr {
         display: block;
     }

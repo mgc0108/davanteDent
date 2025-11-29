@@ -5,31 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DavanteDent - Gestión de Citas</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- Sección de cabecera:incluye branding y título principal -->
     <header>
         <div class="logo-container">
             <img src="logo-davantedent.png" alt="Logo de DavanteDent: Odontología Integral" class="logo">
         </div>
         <h1>Gestión de Citas</h1>
     </header>
-
     <main>
+        <!-- Formulario principal: Gestión de alta/edición de citas -->
         <section id="formulario-citas">
             <h2>Añadir / Modificar Cita</h2>
+            <!-- Form con validaciones manuales vía JavaScript -->
             <form id="citaForm">
+                <!-- ID oculto para distinguir entre crear o editar una cita -->
                 <input type="hidden" id="citaId" value="">
-
                 <fieldset>
                     <legend>Datos de la Cita</legend>
-                    
                     <label for="fechaDia">Fecha:</label>
                     <input type="number" id="fechaDia" placeholder="Día" required min="1" max="31">
                     <input type="number" id="fechaMes" placeholder="Mes" required min="1" max="12">
                     <input type="number" id="fechaAnio" placeholder="Año" required min="2025">
-                    
                     <label for="fechaHora">Hora:</label>
                     <input type="number" id="fechaHora" placeholder="Hora" required min="0" max="23">
                     <input type="number" id="fechaMinuto" placeholder="Minuto" required min="0" max="59">
@@ -37,17 +36,14 @@
                     <p class="error-message" id="errorFechaDia"></p>
                     <p class="error-message" id="errorFechaHora"></p> 
                     </fieldset>
-
                 <fieldset>
                     <legend>Datos del Paciente</legend>
-                    
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" required>
                     <p class="error-message" id="errorNombre"></p>
                     <label for="dni">DNI:</label>
                     <input type="text" id="dni" required>
                     <p class="error-message" id="errorDni"></p>
-                    
                     <label for="apellidos">Apellidos:</label>
                     <input type="text" id="apellidos" required>
                     <p class="error-message" id="errorApellidos"></p>
@@ -57,19 +53,19 @@
                     <label for="fechaNacimiento">Fecha de Nacimiento:</label>
                     <input type="date" id="fechaNacimiento" required>
                     <p class="error-message" id="errorFechaNacimiento"></p>
-                    
                 </fieldset>
                 <fieldset>
                     <legend>Observaciones</legend>
                     <textarea id="observaciones"></textarea>
                 </fieldset>
-
                 <button type="submit" id="guardarCitaBtn">Guardar Cita</button>
                 <button type="button" onclick="limpiarFormulario()">Nuevo fromulario</button>
             </form>
         </section>
+        <!-- Listado dinámico donde se renderizan las citas almacenadas -->
         <section id="lista-citas">
             <h2>Citas Programadas</h2>
+            <!-- Tabla generada y manipulada por JavaScript -->
             <table id="tablaCitas">
                 <thead>
                     <tr>
@@ -85,8 +81,8 @@
                     </tbody>
             </table>
         </section>
+        <!-- Información institucional y de contacto -->
     </main>
-
     <footer>
         <p>DavanteDent S.L.
             Dirección: C/Sonrisa, 35, 28001 Madrid
@@ -96,7 +92,6 @@
             Horario: Lunes a Viernes: 9:00 - 14:00 y 16:00 - 20:00
         </p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
